@@ -1,0 +1,16 @@
+%% Main Script for GNG2 DATA ANALYSIS
+clear all; close all; format long;
+surveydata=xlsread('GNG2DATA.xlsx','A2:AP3');
+numrespondents=2;  %% number of survey respondents
+numquestions=16;
+for i=1:numrespondents
+   respondent(i,1)=Respondent; %% set up respondents 
+   respondent(i,1).SurveyResponses=
+end
+%% Read in survey responses
+for i=1:numrespondents
+[~, ~, respondent(i,1).SurveyResponses] =xlsread('GNG2DATA.xlsx','strcat('A',num2str(i+1)):strcat('AP',num2str(i+1))'); 
+end
+
+
+
