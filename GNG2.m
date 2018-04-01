@@ -10,8 +10,7 @@ for i=1:numrespondents
    respondent(i,1)=Respondent; %% set up respondents 
    respondent(i,1).SurveyResponses=surveydata(i,:);
 end
-
-
-
-
-
+for i=1:numrespondents
+surveyquestions(i,1)=respondent(1,1).SurveyResponses(1,10);
+end
+R1=surveyquestions(1,1);
